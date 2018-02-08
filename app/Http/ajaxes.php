@@ -1,6 +1,6 @@
 <?php
 
-namespace Tonik\Theme\App\Http;
+namespace Theme\App\Http;
 
 /*
 |-----------------------------------------------------------
@@ -27,5 +27,5 @@ function action_callback()
 
     die();
 }
-add_action('wp_ajax_my_action', 'Tonik\Theme\App\Http\action_callback');
-add_action('wp_ajax_nopriv_my_action', 'Tonik\Theme\App\Http\action_callback');
+add_action('wp_ajax_my_action', 'Theme\App\Http\action_callback');
+add_action('wp_ajax_nopriv_my_action', 'Theme\App\Http\action_callback');

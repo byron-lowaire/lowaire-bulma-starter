@@ -11,7 +11,7 @@ return [
     | be in sync with `Text Domain:` entry inside style.css theme file.
     |
     */
-    'textdomain' => '{{ theme.textdomain }}',
+    'textdomain' => 'funalmanac',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,6 +78,11 @@ return [
         'Setup/filters.php',
         'Setup/supports.php',
         'Setup/services.php',
+        'Setup/timber.php',
+        'Setup/installer/class-tgm-plugin-activation.php',
+        'Setup/installer/tgm-config.php',
+        'Setup/installer/merlin.php',
+        'Setup/installer/merlin-config.php',
         'Structure/navs.php',
         'Structure/widgets.php',
         'Structure/sidebars.php',

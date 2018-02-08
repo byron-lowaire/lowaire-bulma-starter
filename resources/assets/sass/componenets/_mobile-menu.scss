@@ -1,0 +1,4 @@
+.c-mobile-menu {
+  @extend .navbar-menu;
+  @extend .is-hidden-desktop;
+}

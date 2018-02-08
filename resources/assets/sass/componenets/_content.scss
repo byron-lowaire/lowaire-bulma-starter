@@ -1,0 +1,7 @@
+.c-content {
+  @extend .section;
+  &__wrapper {
+    @extend .container;
+    @extend .content;
+  }
+}

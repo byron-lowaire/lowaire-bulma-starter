@@ -1,0 +1,93 @@
+{% block html_head_container %}
+  {% include 'layout/head.twig' %}
+  {% block head %}
+  {% endblock %}
+  </head>
+{% endblock %}
+
+<body class="{{ body_class }}" data-template="base.twig">
+
+<nav id="mobile-menu" class="c-mobile-menu">
+  <ul class="c-mobile-menu__list">
+    {% for item in mobile_menu.items %}
+      <li class="c-mobile-menu__item {{ item.classes|join(' ') }}">
+        <a class="c-mobile-menu__link" href="{{ item.link }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<section class="c-header c-header--{{ post.slug }}">
+  <!-- Hero head: will stick at the top -->
+  <div class="c-header__head">
+
+    <nav id="primary-menu" class="c-primary-menu">
+      <div class="c-primary-menu__container">
+        <div class="c-primary-menu__brand">
+          <a class="c-primary-menu__brand-link" href="{{ site.url }}">
+            {{ site.title }}
+          </a>
+          <div id="mobile-trigger" data-target="mobile-menu" class="c-primary-menu__hamburger">
+            <span class="c-primary-menu__hamburger-span c-primary-menu__hamburger-span--1"></span>
+            <span class="c-primary-menu__hamburger-span c-primary-menu__hamburger-span--2"></span>
+            <span class="c-primary-menu__hamburger-span c-primary-menu__hamburger-span--3"></span>
+          </div>
+        </div>
+        <nav class="c-primary-menu__list">
+          <div class="c-primary-menu__list-container">
+            {% for item in primary_menu.items %}
+              {% if item.children %}
+                <div class="c-primary-menu__dropdown-parent">
+                  <a class="c-primary-menu__link" href="{{ item.link }}">{{ item.title }}</a>
+                  <div class="c-primary-menu__dropdown">
+                    {% for sub_item in item.children %}
+                      <a class="c-primary-menu__dropdown-item" href="{{ sub_item.link }}">{{ sub_item.title }}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% else %}
+                <a class="c-primary-menu__item" href="{{ item.link }}">{{ item.title }}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </nav>
+      </div>
+    </nav>
+  </div>
+
+  {% block header %}
+    <!-- Hero content: will be in the middle -->
+    <div class="c-header__body">
+      <div class="c-header__body-container">
+        <h1 class="c-header__title">
+          {{ post.title }}
+        </h1>
+        <h2 class="c-header__subtitle">
+          {{ post.excerpt }}
+        </h2>
+      </div>
+    </div>
+  {% endblock %}
+</section>
+
+<main id="content" role="main" class="c-content">
+  <div class="c-content__wrapper">
+    {% block content %}
+      {% if post.content %}
+        {{ post.content }}
+      {% else %}
+        nothing to see here
+        {# include "partials/content-none.twig" #}
+      {% endif %}
+    {% endblock %}
+  </div>
+</main>
+
+{% block footer %}
+  <footer class="c-footer">
+    {% include 'layout/footer.twig' %}
+  </footer>
+  {{ function('wp_footer') }}
+{% endblock %}
+</body>
+</html>

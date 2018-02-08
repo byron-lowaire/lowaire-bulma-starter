@@ -1,0 +1,21 @@
+.c-header {
+  @extend .hero;
+  @extend .is-primary;
+  @extend .is-medium;
+  &__head {
+    @extend .hero-head;
+  }
+  &__body {
+    @extend .hero-body;
+  }
+  &__body-container {
+    @extend .container;
+    @extend .has-text-centered;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__subtitle {
+    @extend .subtitle;
+  }
+}

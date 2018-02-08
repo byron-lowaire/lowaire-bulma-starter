@@ -1,0 +1,11 @@
+{% extends "layout/base.twig" %}
+
+{% block content %}
+  <div class="l-columns">
+    {% for post in posts %}
+      {% include ['partials/thumbnails/'~post.post_type~'.twig', 'partials/thumbnail/default.twig'] %}
+    {% endfor %}
+  </div>
+
+  {# include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } #}
+{% endblock %}

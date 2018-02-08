@@ -1,0 +1,13 @@
+.l-columns {
+  @extend .columns;
+  flex-wrap: wrap;
+}
+
+.l-column {
+  @extend .column;
+  @for $i from 1 through 12 {
+    &--#{$i} {
+      @extend .is-#{$i};
+    }
+  }
+}

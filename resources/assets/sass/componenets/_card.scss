@@ -1,0 +1,27 @@
+.c-card {
+  @extend .card;
+  &__image-container {
+    @extend .card-image;
+  }
+  &__figure {
+    @extend .image;
+  }
+  &__image {
+  }
+  &__body {
+    @extend .card-content;
+  }
+  &__content {
+    @extend .content ;
+  }
+  &__title {
+    @extend .title;
+    @extend .is-4;
+  }
+  &__footer {
+    @extend .card-footer;
+  }
+  &__link-item {
+    @extend .card-footer-item;
+  }
+}

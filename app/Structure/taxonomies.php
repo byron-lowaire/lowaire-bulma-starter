@@ -1,6 +1,6 @@
 <?php
 
-namespace Tonik\Theme\App\Structure;
+namespace Theme\App\Structure;
 
 /*
 |-----------------------------------------------------------
@@ -12,7 +12,7 @@ namespace Tonik\Theme\App\Structure;
 |
 */
 
-use function Tonik\Theme\App\config;
+use function Theme\App\config;
 
 /**
  * Registers `book_genre` custom taxonomy.
@@ -44,4 +44,4 @@ function register_book_genre_taxonomy()
         ],
     ]);
 }
-add_action('init', 'Tonik\Theme\App\Structure\register_book_genre_taxonomy');
+add_action('init', 'Theme\App\Structure\register_book_genre_taxonomy');

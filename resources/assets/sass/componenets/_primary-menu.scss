@@ -1,0 +1,41 @@
+.c-primary-menu {
+  @extend .navbar;
+  @extend .is-transparent;
+  &__container {
+    @extend .container;
+  }
+  &__brand {
+    @extend .navbar-brand;
+  }
+  &__brand-link {
+    @extend .navbar-item
+  }
+  &__hamburger {
+    @extend .navbar-burger;
+  }
+  &__list {
+    @extend .navbar-menu;
+  }
+  &__list-container {
+    @extend .navbar-end;
+  }
+  &__item {
+    @extend .navbar-item;
+  }
+  &__link {
+    @extend .navbar-link;
+  }
+  &__dropdown-parent {
+    @extend .navbar-item;
+    @extend .has-dropdown;
+    @extend .is-hoverable;
+  }
+  &__dropdown {
+    @extend .navbar-dropdown;
+    @extend .is-boxed;
+  }
+  &__dropdown-item {
+    @extend .navbar-item;
+    @extend .has-text-black;
+  }
+}

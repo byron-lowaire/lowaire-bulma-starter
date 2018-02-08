@@ -1,0 +1,21 @@
+<div class="l-column l-column--3">
+  <div class="c-card">
+    {% if post.thumbnail.src %}
+      <div class="c-card__image-container">
+        <figure class="c-card__figure">
+          <img class="c-card__image" src="{{ post.thumbnail.src }}" alt="Placeholder image">
+        </figure>
+      </div>
+    {% endif %}
+    <div class="c-card__body">
+      <div class="c-card__content">
+        <h3 class="c-card__title">{{ post.title }}</h3>
+        <p>{{ post.preview.length(25) }}</p>
+        <time>{{ post.date }}</time>
+      </div>
+    </div>
+    <footer class="c-card__footer">
+      <a href="{{ post.link }}" class="c-card__link-item">Read More</a>
+    </footer>
+  </div>
+</div>

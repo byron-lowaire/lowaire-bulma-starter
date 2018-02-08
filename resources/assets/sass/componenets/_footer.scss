@@ -1,0 +1,10 @@
+.c-footer {
+  @extend .footer;
+  &__container {
+    @extend .container;
+    @extend .has-text-centered;
+  }
+  &__content {
+    @extend .content;
+  }
+}
