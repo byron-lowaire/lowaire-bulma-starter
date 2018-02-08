@@ -3,6 +3,7 @@
 node_modules
 npm-debug.log
 vendor
+wp-content
 
 .DS_Store
 Thumbs.db
