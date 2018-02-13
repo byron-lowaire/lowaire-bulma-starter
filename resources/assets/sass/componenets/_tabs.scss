@@ -1,0 +1,18 @@
+.c-tabs {
+  @extend .tabs;
+  &--boxed {
+    @extend .is-boxed;
+  }
+  &--fullwidth {
+    @extend .is-fullwidth;
+  }
+  &__list {
+  }
+  &__item {
+    &--active {
+      @extend .is-active;
+    }
+  }
+  &__content {
+  }
+}

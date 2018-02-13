@@ -9,7 +9,7 @@
 	|
 	| Think about theme template files as some sort of controllers
 	| from MVC design pattern. They should link application
-	| logic with your theme view templates files.
+	| logic with your theme view pages files.
 	|
 	*/
 
@@ -19,6 +19,6 @@
     /**
      * Renders front page.
      *
-     * @see resources/templates/front-page.twig
+     * @see resources/pages/front-page.twig
      */
     \Timber::render( 'front-page.twig', $context );

@@ -18,6 +18,6 @@
     /**
      * Renders single page.
      *
-     * @see resources/templates/single.twig
+     * @see resources/pages/single.twig
      */
     \Timber::render( '404.twig', $context );

@@ -85,7 +85,7 @@ module.exports = merge({
       files: [
         "*.php",
         "app/**/*.php",
-        "resources/templates/**/*.php",
+        "resources/pages/**/*.php",
         "resources/assets/js/**/*.js",
         "resources/assets/sass/**/*.{sass,scss}",
         "resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}",

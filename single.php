@@ -9,7 +9,7 @@
 	|
 	| Think about theme template files as some sort of controllers
 	| from MVC design pattern. They should link application
-	| logic with your theme view templates files.
+	| logic with your theme view pages files.
 	|
 	*/
 
@@ -19,6 +19,6 @@
     /**
      * Renders single page.
      *
-     * @see resources/templates/single.twig
+     * @see resources/pages/single.twig
      */
     \Timber::render( 'single.twig', $context );

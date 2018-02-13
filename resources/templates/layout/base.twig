@@ -10,8 +10,22 @@
 <nav id="mobile-menu" class="c-mobile-menu">
   <ul class="c-mobile-menu__list">
     {% for item in mobile_menu.items %}
-      <li class="c-mobile-menu__item {{ item.classes|join(' ') }}">
-        <a class="c-mobile-menu__link" href="{{ item.link }}">{{ item.title }}</a>
+      <li class="c-mobile-menu__item">
+        {% if item.children %}
+          <a class="c-mobile-menu__sub-menu" href="#">{{ item.title }}</a>
+          <ul class="c-mobile-menu__sub-list">
+            <li class="c-mobile-menu__item">
+              <a class="c-mobile-menu__dropdown-item" href="{{ item.link }}">{{ item.title }}</a>
+            </li>
+            {% for sub_item in item.children %}
+              <li class="c-mobile-menu__item">
+                <a class="c-mobile-menu__dropdown-item" href="{{ sub_item.link }}">{{ sub_item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <a class="c-mobile-menu__link" href="{{ item.link }}">{{ item.title }}</a>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
@@ -27,7 +41,7 @@
           <a class="c-primary-menu__brand-link" href="{{ site.url }}">
             {{ site.title }}
           </a>
-          <div id="mobile-trigger" data-target="mobile-menu" class="c-primary-menu__hamburger">
+          <div id="mobile-trigger" data-activates="mobile-menu" class="c-primary-menu__hamburger">
             <span class="c-primary-menu__hamburger-span c-primary-menu__hamburger-span--1"></span>
             <span class="c-primary-menu__hamburger-span c-primary-menu__hamburger-span--2"></span>
             <span class="c-primary-menu__hamburger-span c-primary-menu__hamburger-span--3"></span>

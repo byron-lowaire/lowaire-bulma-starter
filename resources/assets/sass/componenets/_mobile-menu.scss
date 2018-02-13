@@ -1,4 +1,46 @@
+$menu-item-color: $white;
+$menu-item-hover-color: $link;
+
 .c-mobile-menu {
   @extend .navbar-menu;
   @extend .is-hidden-desktop;
+  @extend .menu;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 50px;
+  background: $primary;
+  transition: 0.3s ease all;
+  overflow: hidden;
+  color: $white;
+  display: block;
+  opacity: 0;
+  max-height: 0;
+  &.is-active {
+    max-height: 500px;
+    opacity: 1;
+  }
+  &__sub-menu {
+    color: $white !important;
+  }
+  &__list {
+    @extend .menu-list;
+  }
+  &__sub-list {
+    @extend .menu-list;
+    max-height: 0;
+    transition: 0.3s ease all;
+    overflow: hidden;
+    &.is-active {
+      max-height: 400px;
+    }
+  }
+  &__list-item {
+  }
+  &__link {
+    color: $white !important;
+  }
+  &__dropdown-item {
+    color: $white !important;
+  }
 }

@@ -1,0 +1,31 @@
+.c-button {
+  @extend .button;
+  transition: 0.3s ease all;
+  &--primary {
+    @extend .is-primary;
+  }
+  &--info {
+    @extend .is-info;
+  }
+  &--link {
+    @extend .is-link;
+  }
+  &--warning {
+    @extend .is-warning;
+  }
+  &--danger {
+    @extend .is-danger;
+  }
+  &--outlined {
+    @extend .is-outlined;
+  }
+  &--rounded {
+    @extend .is-rounded;
+  }
+  &--inverted {
+    @extend .is-inverted;
+  }
+  &--expanded {
+    width: 100%;
+  }
+}

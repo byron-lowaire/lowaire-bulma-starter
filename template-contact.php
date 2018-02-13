@@ -1,10 +1,12 @@
 <?php
-
-    namespace Theme\Page;
+    /*
+     * Template Name: Contact Page
+     */
+    namespace Theme\template\Contact;
 
     /*
 	|------------------------------------------------------------------
-	| Page Controller
+	| Single Controller
 	|------------------------------------------------------------------
 	|
 	| Think about theme template files as some sort of controllers
@@ -21,4 +23,4 @@
      *
      * @see resources/pages/single.twig
      */
-    \Timber::render( 'single.twig', $context );
+    \Timber::render( 'pages/contact.twig', $context );

@@ -1,0 +1,38 @@
+{% extends "layout/base.twig" %}
+
+{% block content %}
+  <div class="l-columns">
+    <div class="l-column">
+      <div class="c-form">
+        {% for field in post.get_field('fields') %}
+          {% if field.type == "textarea" %}
+            <div class="c-form__field">
+              <label for="contact_{{ field.name }}" class="c-form__label">{{ field.name }}</label>
+              <div class="c-form__control">
+                <textarea class="c-form__textarea" name="{{ field.name }}"
+                          id="contact_{{ field.name }}"></textarea>
+              </div>
+            </div>
+          {% else %}
+            <div class="c-form__field">
+              <label for="contact_{{ field.name }}" class="c-form__label">{{ field.name }}</label>
+              <div class="c-form__control">
+                <input class="c-form__input" type="{{ field.type }}" name="{{ field.name }}"
+                       id="contact_{{ field.name }}"/>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+        <div class="c-form__field">
+          <div class="c-form__control">
+            <button class="c-button c-button--primary c-button--outlined c-button--expanded">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="l-column">
+      {{ post.content }}
+    </div>
+  </div>
+{% endblock %}

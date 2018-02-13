@@ -21,7 +21,7 @@ $theme = Tonik\Gin\Foundation\Theme::getInstance();
  |
  | We need to bind configs like theme's paths, directories and
  | files to autoload. These values will be used by the rest
- | of theme components like assets, templates etc.
+ | of theme components like assets, pages etc.
  |
  */
 

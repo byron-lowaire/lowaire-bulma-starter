@@ -1,0 +1,38 @@
+.c-carousel {
+  @extend .carousel;
+  &--animated {
+    @extend .carousel-animated;
+  }
+  &--animate-slide {
+    @extend .carousel-animate-slide;
+  }
+  &--animate-fade {
+    @extend .carousel-animate-fade;
+  }
+  &__container {
+    @extend .carousel-container;
+  }
+  &__item {
+    @extend .carousel-item;
+    &--background {
+      @extend .carousel-item;
+    }
+  }
+  &__image {
+    @extend .is-background;
+  }
+  &__navigation {
+    @extend .carousel-navigation;
+    &--overlay {
+      @extend .is-overlay;
+    }
+  }
+  &__navigation-item {
+    &--left {
+      @extend .carousel-nav-left;
+    }
+    &--right {
+      @extend .carousel-nav-right;
+    }
+  }
+}

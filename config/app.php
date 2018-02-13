@@ -18,12 +18,12 @@ return [
     | Templates files extension
     |--------------------------------------------------------------------------
     |
-    | Determines the theme's templates settings like an extension of the files.
+    | Determines the theme's pages settings like an extension of the files.
     | By default, they use `.tpl.php` suffix to distinguish template files
     | from controllers, but you are free to change it however you like.
     |
     */
-    'templates' => [
+    'pages' => [
         'extension' => '.tpl.php'
     ],
 
@@ -48,13 +48,13 @@ return [
     |--------------------------------------------------------------------------
     |
     | This array of directories will be used within core for locating
-    | and loading theme files, assets and templates. They must be
+    | and loading theme files, assets and pages. They must be
     | given as relative to the `root` theme directory.
     |
     */
     'directories' => [
         'languages' => 'resources/languages',
-        'templates' => 'resources/templates',
+        'pages' => 'resources/pages',
         'assets' => 'resources/assets',
         'public' => 'public',
         'app' => 'app',

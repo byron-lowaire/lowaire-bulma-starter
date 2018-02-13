@@ -1,0 +1,20 @@
+.c-form {
+  &__field {
+    @extend .field;
+  }
+  &__control {
+    @extend .control;
+  }
+  &__label {
+    @extend .label;
+  }
+  &__select {
+    @extend .select;
+  }
+  &__input {
+    @extend .input;
+  }
+  &__textarea {
+    @extend .textarea;
+  }
+}

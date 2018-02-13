@@ -1,13 +1,18 @@
 @import 'variables';
+@import 'mixins';
 @import 'bulma';
-
+@import 'typography';
 @import 'componenets/columns';
 
-@import 'componenets/header';
-@import 'componenets/footer';
-@import 'componenets/content';
+@import 'componenets/button';
+@import 'componenets/card';
+@import 'componenets/carousel';
+@import 'componenets/tabs';
 
 @import 'componenets/primary-menu';
 @import 'componenets/mobile-menu';
 
-@import 'componenets/card';
+@import 'componenets/header';
+@import 'componenets/footer';
+@import 'componenets/content';
+@import 'componenets/form';
